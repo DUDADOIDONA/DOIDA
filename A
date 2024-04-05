@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de PDF</title>
+</head>
+<body>
+    <iframe id="pdfViewer" src="ACE Scanner_2024_04_05.pdf" width="100%" height="100%"></iframe>
+
+    <script>
+        // Este script irá redimensionar o iframe para preencher a tela inteira
+        function resizeIframe() {
+            var iframe = document.getElementById("pdfViewer");
+            iframe.style.height = window.innerHeight + "px";
+        }
+
+        // Chame a função resizeIframe() quando a janela for redimensionada
+        window.onresize = resizeIframe;
+
+        // Chame resizeIframe() no carregamento inicial da página
+        window.onload = resizeIframe;
+    </script>
+</body>
+</html>
